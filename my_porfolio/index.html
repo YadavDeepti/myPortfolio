@@ -55,12 +55,13 @@
 
 
     <div class="about-top">
-      <h2 class="about-heading">About Me</h2>
-      <p class="about-top-data"> Here you will find more information about me,
+      <h2 class="about-heading common-heading">About Me</h2>
+      <div class="underline"></div>
+      <p class="about-top-data common-data"> Here you will find more information about me,
          what I do, and my current skills mostly in terms of programming and technology</p>
     </div>
     <section class="about section">
-      <div class="container grid grid-two-col">
+      <div class="container grid grid-two-col about-grid">
         <div class="about-data">
           <h3 class="common-heading">Get to know me!</h3>
           <p class="about-full-data">
@@ -74,21 +75,62 @@
              that matches my skills and experience then don't hesitate to <b>contact</b>  me.
           </p>
           <button class="btn btn-contact">Contact</button>
-        </div>  
-        <div class="about-skill">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">Javascript</span>
-            <span class="skill">React</span>
-            <span class="skill">GIT</span>
-            <span class="skill">Github</span>
-            <span class="skill">Responsive Design</span>
-            <span class="skill">Figma(Basic)</span>
+        </div> 
+        <div class="about-skill-container">
+          <div class="about-skill">
+            <h3 class="common-heading">My Skils</h3>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Javascript</div>
+            <div class="skill">React</div>
+            <div class="skill">GIT</div>
+            <div class="skill">Github</div>
+            <div class="skill">Responsive Design</div>
+            <div class="skill">Figma(Basic)</div>
             <button class="btn btn-resume">Download Resume</button>
         </div>
+        </div> 
+        
         </div>
       </div>
 
     </section>
+     
+    <div class="contact-top">
+      <h2 class="contact-heading common-heading">Contact Me</h2>
+      <div class="underline"></div>
+      <p class="contact-data common-data"> Feel free to Contact me by submitting the form below and 
+        I will get back to you as soon as possible.</p>
+    </div>
+    <section class="contact section">
+      <div class="section-contact-main grid ">
+        <div class=" contact-container ">
+        <form action="#" method="POST">
+          <div class="contact-field">
+            <div>
+              <input class="contact-label" type="text" name="username" id="" required placeholder="Enter your name">
+            </div>
+            <div >
+              <input class="contact-label" type="email" name="email" required placeholder="Enter your email" autocomplete="false">
+            </div>
+            <div>
+             <textarea required cols="30" rows="10" class="contact-label contact-text" name="message" id="" placeholder="Enter your message"></textarea>
+           </div>
+          </div>
+            <button class="btn btn-resume">Send Message</button>
+          
+        </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <a href="https://github.com/deeptipoojajyoti/myPortfolio" target="_blank">
+          <div class="footer-data">Copyright ©2022 All rights reserved | Designed and Build by Deepti Yadav</div>
+        </a>
+      </div>
+    </footer>
+
 </body>
 </html>

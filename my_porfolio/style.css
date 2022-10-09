@@ -67,11 +67,12 @@ li {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  margin-left: 140px;
 }
 
 .grid {
   display: grid;
-  gap: 90px;
+  margin-right: 40px;
 }
 
 .grid-two-col {
@@ -90,6 +91,7 @@ li {
   background: transparent;
   padding: 16px 32px;
   border: 3px solid var(--main-color);
+  border-radius: 5px;
   color: var(--link-color);
   display: inline-block;
   font-size: 18px;
@@ -108,6 +110,36 @@ li {
   box-shadow: 0 0.5em 0.5em -0.4em var(--main-color);
   transform: translateY(-0.25em);
   color: rgb(255 255 255);
+  background-color: rgb(0,255,221,.1);
+  
+}
+
+.underline{
+  width:45px;
+  height:8px;
+  background-color: var(--main-color);
+  border-radius: 4px;
+  display: block;
+  margin-left: 730px;
+  margin-bottom: 20px;
+}
+
+.common-data{
+  display: block;
+  text-align: center;
+  max-width: 800px;
+  margin:auto;
+}
+
+.common-heading {
+  font-size: 30px;
+  font-weight: 400;
+  font-size: 50px;
+  /*position: relative;*/
+  margin-left: 10px;
+  color: var(--link-color);
+  margin-top: 80px;
+  
 }
 
 
@@ -172,6 +204,7 @@ li {
 }
 
 
+
 /*---------hero section-----------*/
 
 .hero-section-data{
@@ -192,8 +225,8 @@ li {
   .hero-data{
     margin-top: 15px;
     margin-bottom: 50px;
-    /*max-width: 600px;*/
-    line-height: 1.6px;
+    max-width: 600px;
+    line-height: 40px;
     font-size: 24px;
     letter-spacing: 1.5px;
 
@@ -203,6 +236,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   
   .hero-img {
@@ -222,18 +256,15 @@ li {
   
 /*---------about section-----------*/
 
-.about-heading {
+.about-grid{
+   gap: 200px;
+}
+
+.common-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
-}
-
-.about-top-data{
-  display: block;
-  text-align: center;
-  max-width: 800px;
-  margin:auto;
+  
 }
 
 .about-data{
@@ -242,25 +273,87 @@ li {
   justify-content: center;
   align-items:flex-start;
 }
+.about-full-data{
+  margin-left: 10px;
+}
 
 .about-skil{
   padding: 64px 0;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
- .common-heading {
-  font-size: 30px;
-  font-weight: 400;
-  margin-bottom: 30px;
-  /*position: relative;*/
-  color: var(--link-color)
+  flex-direction: row;
+  margin-left: 160px;
 }
 
 .btn-contact{
   margin-top: 40px;
+  margin-left: 10px;
+}
+
+.skill{
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px ;
+  font-size: 18px;
+  color: var(--para-color);
+  background-color: #24343a;
+  border-radius: 5px;
+}
+
+.btn-resume{
+  display: block;
+  margin: 50px 10px;
+
 }
 
 
+/*---------contact section-----------*/
+.section-contact-main{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-content: center;
+}
 
+.contact-container{
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 800px;
+  background-color: #24343a;
+  border-radius: 5px;
+}
+
+.contact-field{
+  margin-top: 50px;
+}
+.contact-label{
+  width: 600px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #446069;
+}
+
+.contact-text{
+  height:150px;
+  font-size: 16px;;
+}
+
+::placeholder{
+  color: var(--para-color);
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.footer-data{
+  color: var(--main-color);
+  letter-spacing: 1.5px;
+}
