@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deepti Yadav</title>
     <link rel="stylesheet" href="style.css"/>
+    
 </head>
 <body>
     <header class="header">
@@ -19,22 +20,25 @@
 
         <nav>
             <ul class="navbar-lists">
-                <li><a class="navbar-link home-link" href="#" >Home</a></li>
-                <li><a class="navbar-link about-link" href="/about.html">About</a></li>
-                <li><a class="navbar-link service-link" href="/projects.html">Projects</a></li>
-                <li>
-                  <a
-                    class="navbar-link"
-                    href="/contact.html"
-                    target="_blank"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
+                <li><a class="navbar-link home-link" href="#home">Home</a></li>
+                <li><a class="navbar-link about-link" href="#about"  >About</a></li>
+                <li><a class="navbar-link project-link" href="#project" >Projects</a></li>
+                <li><a class="navbar-link contact-link" href="#contact">Contact</a></li></ul>
         </nav>
+        <div class="mobile-navbar-btn">
+          <ion-icon
+            name="menu-outline"
+            class="mobile-nav-icon"
+          ></ion-icon>
+  
+          <ion-icon
+            name="close-outline"
+            class="mobile-nav-icon"
+          ></ion-icon>
+        </div>
     </header>
     <main>
-        <section class="hero-section section">
+        <section class="hero-section section" >
             <div class="container grid grid-two-col">
                 <div class="hero-section-data">
                     <p class="hero-top-line">Hey!, I'm</p>
@@ -47,16 +51,21 @@
                     
                 </div>
                 <div class="section-hero-image">
-                    <img src="profile.jpg" alt="Profile Picture" class="hero-img" />
+                    <img src="profile_pic1.jpg" alt="Profile Picture" class="hero-img" />
+                    
                   </div>
+                  
             </div>
         </section>
     </main>
 
 
-    <div class="about-top">
+    <div class="about-top about-section">
+      
+     
       <h2 class="about-heading common-heading">About Me</h2>
-      <div class="underline"></div>
+  
+    
       <p class="about-top-data common-data"> Here you will find more information about me,
          what I do, and my current skills mostly in terms of programming and technology</p>
     </div>
@@ -95,26 +104,80 @@
       </div>
 
     </section>
+
+
+    <div class="about-top projectHeading-section" >
+      <h2 class="about-heading common-heading">Projects</h2>
      
-    <div class="contact-top">
+      <p class="about-top-data common-data"> Here you will find some of my personal 
+        projects that I created, with each project containing its own case study</p>
+    </div>
+    <div >
+      <div class="conatiner project-section grid-two-col">
+        <div>
+          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+        </div>
+        <div class="about-data">
+          <h4 class="project-heading">Global News</h4>
+          <p class="about-full-data project-detail">
+            Global News is website that I created where people can get updated with the
+            the current news of all categories.
+          </p>
+          <button class="btn btn-contact">Case Study</button>
+        </div>
+      </div>
+     </div>
+     <div >
+      <div class="conatiner project-section grid-two-col">
+        <div class="project-image-container">
+          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+        </div>
+        <div class="about-data">
+          <h4 class="project-heading">ToDo List App</h4>
+          <p class="about-full-data project-detail">
+            This platform is helpful in planning daily schedules and 
+            handle tasks more efficiently.
+          </p>
+          <button class="btn btn-contact">Case Study</button>
+        </div>
+      </div>
+     </div>
+     <div >
+      <div class="conatiner project-section grid-two-col">
+        <div class="project-image-container">
+          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+        </div>
+        <div class="about-data">
+          <h4 class="project-heading">Word Count App</h4>
+          <p class="about-full-data project-detail">
+            This aapplication can count the number of words 
+            as well as characters. And show the approx. time to read the article.
+          </p>
+          <button class="btn btn-contact">Case Study</button>
+        </div>
+      </div>
+     </div>
+     
+    <div class="contact-top contact-section">
       <h2 class="contact-heading common-heading">Contact Me</h2>
-      <div class="underline"></div>
+     
       <p class="contact-data common-data"> Feel free to Contact me by submitting the form below and 
         I will get back to you as soon as possible.</p>
     </div>
+
     <section class="contact section">
       <div class="section-contact-main grid ">
         <div class=" contact-container ">
-        <form action="#" method="POST">
+        <form action="https://formspree.io/f/mnqrldoe" method="POST">
           <div class="contact-field">
             <div>
-              <input class="contact-label" type="text" name="username" id="" required placeholder="Enter your name">
+              <input class="contact-label" type="text" name="username" id="" autocomplete= "off" required placeholder="Enter your name">
             </div>
             <div >
-              <input class="contact-label" type="email" name="email" required placeholder="Enter your email" autocomplete="false">
+              <input class="contact-label" type="email" name="email" required placeholder="Enter your email"  autocomplete="off">
             </div>
             <div>
-             <textarea required cols="30" rows="10" class="contact-label contact-text" name="message" id="" placeholder="Enter your message"></textarea>
+             <textarea cols="30" rows="10" class="contact-label contact-text" name="message" id="" required autocomplete = "off" placeholder="Enter your message"></textarea>
            </div>
           </div>
             <button class="btn btn-resume">Send Message</button>
@@ -133,4 +196,6 @@
     </footer>
 
 </body>
+<script src="main.js"></script>
+
 </html>

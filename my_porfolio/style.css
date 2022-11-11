@@ -8,6 +8,7 @@
 html {
     font-size: 62.5%;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
   }
 
 body{
@@ -37,8 +38,9 @@ h2{
   color: var(--link-color);
   font-size: 50px;
   font-weight: 400;
+  text-decoration: underline solid var(--main-color) 2px;
+  }
 
-}
 b{
   color: #accee6;
 }
@@ -60,14 +62,14 @@ li {
   list-style: none;
 }
 
-.section {
-  padding: 100px 0px;
+section {
+  padding: 20px 0px;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  margin-left: 140px;
+  margin-left: 100px;
 }
 
 .grid {
@@ -114,15 +116,7 @@ li {
   
 }
 
-.underline{
-  width:45px;
-  height:8px;
-  background-color: var(--main-color);
-  border-radius: 4px;
-  display: block;
-  margin-left: 730px;
-  margin-bottom: 20px;
-}
+
 
 .common-data{
   display: block;
@@ -132,7 +126,7 @@ li {
 }
 
 .common-heading {
-  font-size: 30px;
+
   font-weight: 400;
   font-size: 50px;
   /*position: relative;*/
@@ -141,16 +135,38 @@ li {
   margin-top: 80px;
   
 }
+.project-heading{
+  
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: var(--link-color);
+}
+
+
 
 
 /*---------header-----------*/
 
 .header{
+  width: 100%;
     display: flex;
     height: 100px;
     padding: 0 60px;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
+}
+
+header.sticky{
+  padding: 0 60px;
+  background-color: #24343a;
+  z-index: 2;
+}
+
+header.header-logo-container
+header.sticky.navbar-lists{
+ color: var(--link-color);
 }
 
 .header .logo{
@@ -200,7 +216,31 @@ li {
 .navbar-link:hover, .navbar-link:active{
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    transform: translateY(-0.25em);
+    /*text-decoration: underline;*/
+    transition: transform 0.5s ease-out;
+}
+
+
+
+.mobile-navbar-btn {
+  /* by default for normal screen we want to hide  */
+  display: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-nav-icon {
+  width: 5rem;
+  height: 5rem;
+  color: #212529;
+}
+
+/* for desktop or mobile menu-outline one must be visible  
+and we need to hide the close menu icon
+*/
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
 }
 
 
@@ -236,15 +276,20 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
     
   }
   
   .hero-img {
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 500px;
     z-index: 1;
-    box-shadow: 10px 10px 0px 0px var(--main-color);
+    border-radius: 10px;
+    margin-top: 50px;
   }
+
+  
+
 
 .button{
   display:inline-block;
@@ -264,7 +309,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .about-data{
@@ -307,6 +352,23 @@ li {
 }
 
 
+/*---------project section-----------*/
+.project-image{
+  width: 600px;
+  margin: 50px;
+  padding: 40px;
+}
+
+.project-section{
+  display: flex;
+  flex-direction: row;
+}
+.project-detail{
+  margin-right: 70px;
+}
+
+
+
 /*---------contact section-----------*/
 .section-contact-main{
   display: flex;
@@ -333,7 +395,13 @@ li {
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 5px;
-  background-color: #446069;
+  border: 1px solid grey;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus{
+  outline: none;
+  border: 1px solid var(--main-color);
 }
 
 .contact-text{
@@ -349,11 +417,462 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 100px;
   margin-bottom: 30px;
 }
 
 .footer-data{
   color: var(--main-color);
   letter-spacing: 1.5px;
+}
+
+
+/*---------media queries-----------*/
+@media(max-width: 82em){
+  .container{
+    max-width: 130em;
+    padding: 0 3.2em;
+  }
+  h1{
+    font-size: 60px;
+  }
+  .hero-data{
+    font-size: 20px;
+  }
+  .navbar-lists{
+    gap:40px;
+    padding: 7px;
+  }
+  .hero-data{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+/* for widht below 1200px  */
+@media ((max-width: 75em) and (min-width: 1025px)){
+  .container {
+    max-width: 110rem;
+  }
+  .navbar-lists {
+    gap: 3.4rem;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .hero-img{
+    width: 280px;
+    height: 400px;
+  }
+  .hero-data{
+    margin-top: 7px;
+    font-size: 18px;
+  }
+  .common-heading{
+   font-size: 36px;
+  }
+  p{
+    line-height: 30px;
+    font-size: 17px;
+  }
+  .btn-contact{
+    margin-top: 10px;
+  }
+
+}
+
+
+ /* when we are in 980px we need to show the menu open icon */
+/* media queries less then 1024px - 769px */
+@media ((max-width: 1024px) and (min-width: 769px)) {
+ .container{
+  margin-left: 40px;
+  margin-top: 30px;
+ }
+ .header {
+  position: relative;
+}
+
+.header .logo {
+  width: 40%;
+  /* height: 3.4rem; */
+}
+
+.navbar {
+  width: 100%;
+  height: 100vh;
+  background: #e7f5ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.navbar-lists {
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .navbar-lists .navbar-link:link,
+.navbar .navbar-lists .navbar-link:visited {
+  color: #212529;
+  font-size: 3.2rem;
+}
+
+.active .navbar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  z-index: 9999;
+}
+
+ .mobile-navbar-btn {
+  display: block;
+  /* background-color: #212529; */
+  z-index: 99999;
+  border: 3px solid #212529;
+  color: #212529;
+}
+.active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+  display: block;
+}
+
+.active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+  display: none;
+}
+
+ 
+  h1{
+    font-size: 40px;
+  }
+  html {
+    font-size: 56.25%;
+  }
+
+.hero-section-data{
+  margin-left: 5px;
+}
+.hero-img{
+  width: 250px;
+  height: 80vh;
+}
+.about-grid{
+  gap:100px;
+}
+section{
+  padding: 0px;
+}
+.common-heading{
+  margin-top: 80px;
+  font-size: 30px;
+}
+.grid{
+  margin-right: 20px;
+}
+.header{
+  height:70px;
+}
+.btn{
+  padding: 10px 20px;
+  font-size: 16px;
+}
+.common-data{
+  max-width: 600px;
+}
+p{
+  font-size: 16px;
+  line-height: 30px;
+}
+.project-image{
+  width: 380px;
+  margin: 50px 20px;
+  padding: 20px;
+}
+.project-detail{
+  margin-right: 20px;
+}
+h4{
+  margin-top: 30px;
+}
+.contact-container{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 600px;
+}
+.contact-label{
+  width:500px;
+}
+}
+
+/* Below 768px - 481px  */
+@media ((max-width: 768px) and (min-width: 481px)){
+  .header {
+    padding: 0 20px;
+  }
+ .navbar-lists{
+    gap: 2px;
+  }
+  .grid-two-col {
+    grid-template-columns: 1fr;
+  }
+  .about-grid{
+    gap: 50px;
+  }
+  .about-skill{
+   margin-left: 40px;
+  }
+  .about-full-data{
+    margin-right: 25px;
+  }
+  .container {
+    max-width: 720px;
+    margin-left: 25px;
+  }
+  
+  .hero-section .grid-two-col {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+  }
+  h1{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero-section-data {
+    align-items: center;
+  }
+
+  .hero-img {
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left:  90px;
+    margin-right: 90px;
+  }
+  
+  .hero-data{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+  }
+  .hero-top-line{
+    margin-top: 30px;
+  }
+  .common-heading{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  p{
+    
+    font-size: 16px;
+    line-height: 25px;
+   
+  }
+  .about-top-data{
+   margin: 20px;
+   text-align: center;
+  }
+.about-data{
+  align-items: center;
+}
+.about-full-data{
+  text-align:justify;
+}
+.contact-container{
+  margin-left: 30px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+.contact-label{
+  width:350px;
+}
+.contact-data{
+margin:20px;
+}
+.project-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-image{
+  
+  max-width: 450px;
+  margin: 20px 35px;
+  padding: 10px;
+}
+.project-detail{
+  max-width: 380px;
+}
+.btn-contact{
+  margin-bottom: 60px;
+}
+
+.footer-container{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+
+/* Below 481px  */
+@media (max-width: 480px){
+ 
+ .navbar-lists{
+    gap: 2px;
+  }
+  .grid-two-col {
+    grid-template-columns: 1fr;
+  }
+  .about-grid{
+    gap: 30px;
+  }
+  .about-skill{
+   margin-left: 20px;
+  }
+  .about-full-data{
+    text-align: justify;
+    margin-right: 20px;
+   
+  }
+  .container {
+    max-width: 350px;
+    margin-left: 5px;
+    margin-right: 30px;
+  }
+  
+  .hero-section  {
+   
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+  }
+  h1{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero-section-data {
+    align-items: center;
+    margin: 0 5px;
+  }
+
+  .hero-img {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left:  90px;
+    margin-right: 90px;
+  }
+  
+  .hero-data{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+  }
+  .hero-top-line{
+    margin-top: 30px;
+  }
+  .common-heading{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  p{
+    
+    font-size: 16px;
+    line-height: 25px;
+   
+  }
+  .about-top-data{
+   margin: 20px;
+   text-align: justify;
+  }
+.about-data{
+  align-items: center;
+}
+
+.contact-container{
+  margin-left: 30px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+.contact-label{
+  width:300px;
+  margin:10px;
+}
+.contact-data{
+margin:20px;
+}
+.project-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-image{
+  
+  max-width: 300px;
+  margin: 20px 35px;
+  padding: 10px;
+}
+.project-detail{
+  max-width: 380px;
+  text-align: justify;
+  margin: 0 20px;
+}
+.btn-contact{
+  margin-bottom: 60px;
+}
+
+.footer-container{
+  margin-top: 100px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+ text-align: center;
+}
 }
