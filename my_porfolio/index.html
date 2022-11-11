@@ -18,7 +18,7 @@
         </div>
         
 
-        <nav>
+        <nav class="navbar">
             <ul class="navbar-lists">
                 <li><a class="navbar-link home-link" href="#home">Home</a></li>
                 <li><a class="navbar-link about-link" href="#about"  >About</a></li>
@@ -26,15 +26,8 @@
                 <li><a class="navbar-link contact-link" href="#contact">Contact</a></li></ul>
         </nav>
         <div class="mobile-navbar-btn">
-          <ion-icon
-            name="menu-outline"
-            class="mobile-nav-icon"
-          ></ion-icon>
-  
-          <ion-icon
-            name="close-outline"
-            class="mobile-nav-icon"
-          ></ion-icon>
+          <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+          <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
         </div>
     </header>
     <main>
@@ -45,7 +38,7 @@
                     <h1 class="hero-heading">Deepti Yadav.</h1>
                     <p class="hero-data">A passionate and creative frontend developer</p>
                   <div class="button">
-                    <button class="btn btn-projects">View Projects</button>
+                    <button class="btn btn-projects project-scroll">View Projects</button>
                     
                   </div>
                     
@@ -83,7 +76,7 @@
             I'm open to <b>Job</b>  opportunities where I can contribute, learn and grow. If you have a good opportunity
              that matches my skills and experience then don't hesitate to <b>contact</b>  me.
           </p>
-          <button class="btn btn-contact">Contact</button>
+          <button class="btn btn-contact contact-scroll">Contact</button>
         </div> 
         <div class="about-skill-container">
           <div class="about-skill">
@@ -96,7 +89,8 @@
             <div class="skill">Github</div>
             <div class="skill">Responsive Design</div>
             <div class="skill">Figma(Basic)</div>
-            <button class="btn btn-resume">Download Resume</button>
+            <a href="https://drive.google.com/file/d/1oHSw_q80nc3jP5bK60mZT5LdThSjdojj/view?usp=sharing" target="_blank">
+              <button class="btn btn-resume">Download Resume</button></a>
         </div>
         </div> 
         
@@ -115,45 +109,45 @@
     <div >
       <div class="conatiner project-section grid-two-col">
         <div>
-          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+          <img src="project1.png" alt="Project Picture" class="project-image " />
         </div>
         <div class="about-data">
           <h4 class="project-heading">Global News</h4>
           <p class="about-full-data project-detail">
-            Global News is website that I created where people can get updated with the
+            Global News is website that I have created in <b>React JS</b> and <b>Bootstrap</b> where people can get updated with the
             the current news of all categories.
           </p>
-          <button class="btn btn-contact">Case Study</button>
+          <a href="https://github.com/YadavDeepti/newsapp" target="_blank"><button class="btn btn-contact">Github Link</button></a>
         </div>
       </div>
      </div>
      <div >
       <div class="conatiner project-section grid-two-col">
         <div class="project-image-container">
-          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+          <img src="project2.png" alt="Project Picture" class="project-image " />
         </div>
         <div class="about-data">
           <h4 class="project-heading">ToDo List App</h4>
           <p class="about-full-data project-detail">
-            This platform is helpful in planning daily schedules and 
+            This application I have created in <b>React Js</b>.This app is helpful in planning daily schedules and 
             handle tasks more efficiently.
           </p>
-          <button class="btn btn-contact">Case Study</button>
+          <a href="https://yadavdeepti.github.io/todo_app/" target="_blank"><button class="btn btn-contact">Live Link</button></a>
         </div>
       </div>
      </div>
      <div >
       <div class="conatiner project-section grid-two-col">
         <div class="project-image-container">
-          <img src="word-calculator.png" alt="Project Picture" class="project-image " />
+          <img src="project3.png" alt="Project Picture" class="project-image " />
         </div>
         <div class="about-data">
           <h4 class="project-heading">Word Count App</h4>
           <p class="about-full-data project-detail">
-            This aapplication can count the number of words 
+            This aapplication is created in <b>React Js</b> and <b>Bootstarp</b> and can count the number of words 
             as well as characters. And show the approx. time to read the article.
           </p>
-          <button class="btn btn-contact">Case Study</button>
+          <a href="https://yadavdeepti.github.io/Word-Count-App/" target="_blank"><button class="btn btn-contact">Live Link</button></a>
         </div>
       </div>
      </div>
@@ -196,6 +190,8 @@
     </footer>
 
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="main.js"></script>
 
 </html>

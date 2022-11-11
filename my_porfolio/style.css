@@ -202,7 +202,7 @@ header.sticky.navbar-lists{
 }
 
 .navbar-link:link, .navbar-link:visited{
-    font-display: inline-block;
+    display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
@@ -230,10 +230,12 @@ header.sticky.navbar-lists{
   border: none;
 }
 
+
+
 .mobile-nav-icon {
-  width: 5rem;
-  height: 5rem;
-  color: #212529;
+  width: 4rem;
+  height: 4rem;
+  color: var(--link-color);
 }
 
 /* for desktop or mobile menu-outline one must be visible  
@@ -481,7 +483,69 @@ input:focus, textarea:focus{
 }
 
 
- /* when we are in 980px we need to show the menu open icon */
+/* when we are in 980px we need to show the menu open icon */
+@media(max-width: 980px){
+  html {
+    font-size: 56.25%;
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .navbar {
+    width: 100%;
+    height: 100vh;
+    background: #24343a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+  }
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 99999;
+    border: 3px solid var(--link-color);
+    color: var(--link-color);
+  }
+  .navbar-lists {
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  .navbar .navbar-lists .navbar-link:link,
+  .navbar .navbar-lists .navbar-link:visited {
+  color: var(--link-color);
+  font-size: 3.2rem;
+}
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    z-index: 9999;
+  }
+  
+   
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+}
+
+
+
+
 /* media queries less then 1024px - 769px */
 @media ((max-width: 1024px) and (min-width: 769px)) {
  .container{
@@ -491,70 +555,14 @@ input:focus, textarea:focus{
  .header {
   position: relative;
 }
-
-.header .logo {
-  width: 40%;
-  /* height: 3.4rem; */
-}
-
-.navbar {
-  width: 100%;
-  height: 100vh;
-  background: #e7f5ff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(100%);
-  transition: all 0.5s linear;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.navbar-lists {
-  flex-direction: column;
-  align-items: center;
-}
-
-.navbar .navbar-lists .navbar-link:link,
-.navbar .navbar-lists .navbar-link:visited {
-  color: #212529;
-  font-size: 3.2rem;
-}
-
-.active .navbar {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(0);
-  z-index: 9999;
-}
-
- .mobile-navbar-btn {
-  display: block;
-  /* background-color: #212529; */
-  z-index: 99999;
-  border: 3px solid #212529;
-  color: #212529;
-}
-.active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
-  display: block;
-}
-
-.active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
-  display: none;
-}
-
- 
-  h1{
+h1{
     font-size: 40px;
   }
   html {
     font-size: 56.25%;
+   
   }
+  
 
 .hero-section-data{
   margin-left: 5px;
