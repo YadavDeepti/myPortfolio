@@ -316,12 +316,10 @@ and we need to hide the close menu icon
 
 .about-data{
   display: flex;
+  text-align: justify;
   flex-direction: column;
   justify-content: center;
-  align-items:flex-start;
-}
-.about-full-data{
-  margin-left: 10px;
+  align-items:center;
 }
 
 .about-skil{
@@ -624,9 +622,12 @@ h4{
   .header {
     padding: 0 20px;
   }
- .navbar-lists{
-    gap: 2px;
+  header.sticky{
+    padding: 0 20px;
+    background-color: #24343a;
+    z-index: 3;
   }
+ 
   .grid-two-col {
     grid-template-columns: 1fr;
   }
@@ -637,7 +638,7 @@ h4{
    margin-left: 40px;
   }
   .about-full-data{
-    margin-right: 25px;
+    margin-right: 10px;
   }
   .container {
     max-width: 720px;
@@ -753,10 +754,20 @@ margin:20px;
 
 /* Below 481px  */
 @media (max-width: 480px){
- 
- .navbar-lists{
-    gap: 2px;
+  .header {
+    padding: 0 20px;
   }
+  header.sticky{
+    padding: 0 20px;
+    background-color: #24343a;
+    z-index: 3;
+  }
+  
+ .mobile-nav-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--link-color);
+}
   .grid-two-col {
     grid-template-columns: 1fr;
   }
@@ -766,15 +777,17 @@ margin:20px;
   .about-skill{
    margin-left: 20px;
   }
+  .below481{
+    margin-right: 50px;
+  }
   .about-full-data{
     text-align: justify;
-    margin-right: 20px;
-   
+    margin-right: 40px;
   }
   .container {
-    max-width: 350px;
+    
     margin-left: 5px;
-    margin-right: 30px;
+    margin-right: 5px;
   }
   
   .hero-section  {
@@ -826,6 +839,7 @@ margin:20px;
   .common-heading{
     margin-top: 50px;
     font-size: 30px;
+    
     text-align: center;
     
   }
@@ -841,6 +855,7 @@ margin:20px;
   }
 .about-data{
   align-items: center;
+  
 }
 
 .contact-container{
