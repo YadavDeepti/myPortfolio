@@ -161,7 +161,6 @@ header.sticky{
   padding: 0 60px;
   background-color: #24343a;
   z-index: 9;
-  position: relative;
 }
 
 header.header-logo-container

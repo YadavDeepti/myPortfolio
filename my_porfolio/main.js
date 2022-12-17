@@ -1,8 +1,6 @@
 window.addEventListener("scroll", function(){
   let header=document.querySelector("header");
-  let mobile_navbar= document.querySelector("mobile-navbar-btn");
   header.classList.toggle("sticky", window.scrollY > 0);
-  //mobile_navbar.classList.toggle("sticky", this.window.scrollY > 0);
 })
 
 
